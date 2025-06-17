@@ -61,11 +61,12 @@ function addTask() {
                 btn.parentElement.remove();
             });
         });
+
+        document.querySelector(".buttons").style.display = "flex";
     }
 
     taskInput.value = "";
     taskInput.focus();
-    document.querySelector(".buttons").style.display = "flex";
 }
 
 // Marcar/desmarcar TODAS las tareas

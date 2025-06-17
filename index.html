@@ -4,35 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de tareas</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="author" content="Virginia">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="container">
 		<div class="row">
 			<div class="column">
-				<div class="date">
-					<span class="day">11</span>
+				<div class="today">
+					<span id="day">11</span>
 
-					<div class="year">
-						<span class="month">Sept</span>
-						<span>2021</span>
+					<div class="month-year">
+						<span id="month">Sept</span>
+						<span id="year">2021</span>
 					</div>
 				</div>
 			</div>
 			
 			<div class="column">
-				<span class="week">Sábado</span>
+				<span id="week">Sábado</span>
 			</div>
 		</div>
 		
 		<div class="row">
-			<input type="text" id="task" class="task" placeholder="Nueva tarea">
-			<input type="button" id="add" class="add" value="+" onclick="addTask()">
-			<input type="button" id="sort" class="sort" value="Orderar">
+			<input type="text" id="task-input" class="task-input" placeholder="Nueva tarea">
+			<input type="button" id="btn-add" class="btn-add" value="+ Añadir">
+		</div>
+
+		<div class="row buttons">
+			<button id="btn-checkall">Marcar / desmarcar todos</button>
+			<button id="btn-removeall">Eliminar todos</button>
 		</div>
 
 		<div class="row">
-			<div id="pending"></div>
+			<ul id="pending"></ul>
 		</div>
 	</div>
 

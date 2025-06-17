@@ -1,0 +1,88 @@
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background: lightgrey;
+}
+
+.container {
+	max-width: 320px;
+	margin: 0 auto;
+	background: white;
+	padding: 1rem;
+
+	& .row {
+		display: flex;
+		justify-content: space-between;		
+	}
+
+	& .column {
+		align-content: center;
+		padding-bottom: 10px;
+	}
+	
+	/* Fecha */
+	& .date {
+		display: grid;
+		grid-template-columns: .2fr 1fr;
+		align-items: center;
+
+		& .day {
+			font-size: 3rem;
+			font-weight: 600;
+		}
+
+		& .year {
+			display: grid;
+			grid-template-rows: min-content;
+
+			& .month { font-weight: 600; }
+		}	
+	}
+
+	& .week {
+		font-size: .8rem;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	/* Formulario */
+	& .task {
+		border: 0;
+		background: #ebebeb;
+		padding: 3px 0 3px 5px;
+		border-radius: 3px;
+	}
+
+	& .add{
+		border: none;
+		border-radius: 50%;
+		padding-inline: 7px;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+	& .sort{
+		background: red;
+		border: 1px solid red;
+		border-radius: 3px;
+		color: white;
+		padding: 3px 10px;
+	}
+
+	/* Lista de tareas */
+	& #pending { 
+		width: 100%; 
+
+		& p {
+			background: #a8ce8d;
+			color: white;
+			padding: 10px;
+			font-size: .9rem;
+			border-radius: 3px;
+			/*width: fit-content;*/
+		}
+	}
+}

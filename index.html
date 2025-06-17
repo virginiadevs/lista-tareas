@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+		<div class="row">
+			<div class="column">
+				<div class="date">
+					<span class="day">11</span>
+
+					<div class="year">
+						<span class="month">Sept</span>
+						<span>2021</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="column">
+				<span class="week">Sábado</span>
+			</div>
+		</div>
+		
+		<div class="row">
+			<input type="text" id="task" class="task" placeholder="Nueva tarea">
+			<input type="button" id="add" class="add" value="+" onclick="addTask()">
+			<input type="button" id="sort" class="sort" value="Orderar">
+		</div>
+
+		<div class="row">
+			<div id="pending"></div>
+		</div>
+	</div>
+
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>

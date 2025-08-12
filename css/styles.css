@@ -82,13 +82,13 @@ body {
 		font-size: 14px;
 		font-weight: 600;
 		color: #fff;
-		background: #007bff;
+		background-color: #0069d9;
 		border: none;
 		padding: 5px 10px;
 		cursor: pointer;
 
 		&:hover {
-			background-color: #0069d9;
+			background-color: #0062cc;
 		}
 	}
 

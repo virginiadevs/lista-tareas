@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de tareas</title>
-    <meta name="author" content="Virginia">
-	<meta name="description" content="">
+    <meta name="author" content="virginiadevs">
+	<meta name="description" content="Aplicación para la gestión de tareas, que permite añadir, eliminar y marcar tareas como completadas.">
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
@@ -13,7 +13,7 @@
 	<!-- Fontawesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 	
-	<!-- My styles -->
+	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -39,12 +39,12 @@
 		
 		<div class="row">
 			<input type="text" id="task-input" class="task-input" placeholder="Nueva tarea">
-			<input type="button" id="btn-add" class="btn-add" value="+ Añadir">
+			<input type="button" id="btn-add" class="btn-add" value="+ Añadir" aria-label="Botón para añadir una tarea">
 		</div>
 
 		<div class="row buttons">
-			<button id="btn-checkall">Marcar / desmarcar todas</button>
-			<button id="btn-removeall">Eliminar todas</button>
+			<button id="btn-checkall" aria-label="Botón para marcar y desmarcar como completadas todas las tareas">Marcar / desmarcar todas</button>
+			<button id="btn-removeall" aria-label="Botón para eliminar todas las tareas">Eliminar todas</button>
 		</div>
 
 		<div class="row">
@@ -52,6 +52,7 @@
 		</div>
 	</div>
 
+	<!-- Functions -->
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>

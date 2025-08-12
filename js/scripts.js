@@ -108,9 +108,8 @@ function removeAllTasks() {
         });
     }
     document.querySelector(".buttons").style.display = "none";
-
-    localStorage.removeItem("tareas");
     document.querySelector("#pending").innerHTML = "";
+    localStorage.removeItem("tareas");
 }
 
 // Crea las tareas para las funciones 'Mostrar tareas' y 'Añadir tarea'
@@ -123,6 +122,7 @@ function createTask(data) {
 
     const removeBtn = document.createElement("button");
     removeBtn.innerHTML = "<i class='fa-solid fa-trash-can'></i>";
+    removeBtn.setAttribute("aria-label", "Botón para eliminar la tarea");
 
     if(data.completada) {
         newTask.classList.add("checked");
@@ -184,6 +184,13 @@ function deleteTask(data) {
     
     if (tasks.length) {
         const newArray = tasks.filter(task => task.descripcion !== data);
-        localStorage.setItem("tareas", JSON.stringify(newArray));
+
+        if (newArray.length === 0) {
+            document.querySelector(".buttons").style.display = "none";
+            localStorage.removeItem("tareas");
+        }
+        else {
+            localStorage.setItem("tareas", JSON.stringify(newArray));
+        }
     }
 }
